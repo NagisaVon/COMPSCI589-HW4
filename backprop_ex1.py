@@ -1,5 +1,4 @@
 from neural_net import *
-from pprint import pprint
 
 nn = Nerual_Net([1, 2, 1])
 nn.debug = True
@@ -18,4 +17,4 @@ cost = nn.accumulate_cost(train)
 print("Total J: {}".format(cost))
 print("--------------------------------------------\n")
 print("Running backpropagation")
-
+nn.back_propagate(train)
